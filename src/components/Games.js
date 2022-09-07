@@ -22,12 +22,19 @@ function Games(){
         
         />
     })
+
+    // get data from GameForm
+    function getGames(newGamesRecived){
+        const updateGames =[...games, newGamesRecived] 
+        setGames(updateGames)
+
+    }
     
 
 
     return (
         <>
-        <GameForm />
+        <GameForm getGames={getGames} />
         {allGames}
        
        

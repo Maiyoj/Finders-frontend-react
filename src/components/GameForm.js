@@ -1,9 +1,9 @@
 import  {useEffect, useState} from "react"
 
-function GameForm(){
+function GameForm({getGames}){
   const [formData, setFormData] = useState({
     name: "",
-    body: ""
+    description: ""
   })
 
   //  handlechanged data
@@ -14,15 +14,37 @@ function GameForm(){
   })}
 
   // function to handle submit
-  function handleSubmit(){
-    
+  function handleSubmit(e){
+    e.preventDefault();
+    const createdGames ={
+      name:formData.name,
+      description:formData.description
+    };
+
+    fetch("http://localhost:9292/games",{
+      method: "POST",
+      headers:{
+        "Content-Type": "application/json",
+      },
+      body:JSON.stringify(createdGames),
+    })
+    .then(res => res.json())
+    .then(newG =>{
+        getGames(newG);
+        setFormData({
+          ...formData,
+          name:"",
+          description:""
+        })
+    })
+
   }
     return(
         <>
-    <div class="block p-6 rounded-lg shadow-lg bg-white max-w-md">
+    <div className="block p-6 rounded-lg shadow-lg bg-white max-w-md">
   <form>
-    <div class="form-group mb-6">
-      <input type="text" class="form-control block
+    <div className="form-group mb-6">
+      <input type="text" className="form-control block
         w-full
         px-3
         py-1.5
@@ -43,9 +65,9 @@ function GameForm(){
         />
     </div>
 
-    <div class="form-group mb-6">
+    <div className="form-group mb-6">
       <textarea
-      class="
+      className="
         form-control
         block
         w-full
@@ -65,12 +87,12 @@ function GameForm(){
       id="exampleFormControlTextarea13"
       rows="3"
       placeholder="Comment"
-      name = "body"
-      value={formData.body}
+      name = "description"
+      value={formData.description}
       onChange = {onDataChange}
     ></textarea>
     </div>
-    <button type="submit" class="
+    <button type="submit" className="
       w-full
       px-6
       py-2.5
@@ -87,7 +109,7 @@ function GameForm(){
       active:bg-blue-800 active:shadow-lg
       transition
       duration-150
-      ease-in-out">Send</button>
+      ease-in-out" onClick={handleSubmit}>Send</button>
   </form>
 </div>
 </>
