@@ -8,6 +8,7 @@ function Navbar(){
             <div className="px-6">
             <Link to={"/"} exact="true">Home</Link>
             <Link to={"/about"} exact="true">About</Link>
+            <Link to={"/games"} exact="true">Games</Link>
             <Link to={"/reviews"} exact="true">Reviews</Link>
             </div>
         </nav>
