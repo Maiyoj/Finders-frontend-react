@@ -27,8 +27,9 @@ function Games(){
 
     return (
         <>
-        {allGames}
         <GameForm />
+        {allGames}
+       
        
         </>
     

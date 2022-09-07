@@ -1,4 +1,22 @@
+import  {useEffect, useState} from "react"
+
 function GameForm(){
+  const [formData, setFormData] = useState({
+    name: "",
+    body: ""
+  })
+
+  //  handlechanged data
+  function onDataChange(e){
+    setFormData({
+      ...formData, [e.target.name]:e.target.value
+
+  })}
+
+  // function to handle submit
+  function handleSubmit(){
+    
+  }
     return(
         <>
     <div class="block p-6 rounded-lg shadow-lg bg-white max-w-md">
@@ -18,8 +36,13 @@ function GameForm(){
         ease-in-out
         m-0
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
-        placeholder="Name" />
+        placeholder="Name"
+        name="name"
+        value={formData.name} 
+        onChange = {onDataChange}
+        />
     </div>
+
     <div class="form-group mb-6">
       <textarea
       class="
@@ -41,7 +64,10 @@ function GameForm(){
       "
       id="exampleFormControlTextarea13"
       rows="3"
-      placeholder="Message"
+      placeholder="Comment"
+      name = "body"
+      value={formData.body}
+      onChange = {onDataChange}
     ></textarea>
     </div>
     <button type="submit" class="
