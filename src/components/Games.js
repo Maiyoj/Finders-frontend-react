@@ -1,5 +1,7 @@
 import SingleGame from "./SingleGame"
 import {useState, useEffect} from "react"
+import GameForm from "./GameForm";
+
 
 function Games(){
     const[games, setGames] = useState([])
@@ -26,6 +28,7 @@ function Games(){
     return (
         <>
         {allGames}
+        <GameForm />
        
         </>
     
