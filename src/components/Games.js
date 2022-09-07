@@ -4,7 +4,7 @@ import {useState, useEffect} from "react"
 function Games(){
     const[games, setGames] = useState([])
     useEffect(()=>{
-        fetch("https://phase2blogs-api.herokuapp.com/blogs")
+        fetch("http://localhost:9292/games")
         .then((res)=> res.json())
         .then((data) =>{
             setGames(data)
@@ -12,11 +12,21 @@ function Games(){
         })
     },[]);
 
+    const allGames = games.map((game) =>{
+        return <SingleGame
+        key={game.id}
+        name={game.name}
+        description={game.description}
+        
+        />
+    })
+    
+
 
     return (
         <>
-        <SingleGame />
-
+        {allGames}
+       
         </>
     
     )
