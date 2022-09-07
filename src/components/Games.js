@@ -14,30 +14,36 @@ function Games(){
         })
     },[]);
 
-    const allGames = games.map((game) =>{
-        return <SingleGame
-        key={game.id}
-        name={game.name}
-        description={game.description}
-        
-        />
-    })
-
     // get data from GameForm
     function getGames(newGamesRecived){
         const updateGames =[...games, newGamesRecived] 
         setGames(updateGames)
 
     }
+
+    //update after delete
+    function handleDelete(id){
+         const deleteUpdate = games.filter((game) => game.id !== id)
+         setGames(deleteUpdate)
+    }
     
+
+    const allGames = games.map((game) =>{
+        return <SingleGame
+        id={game.id}
+        key={game.id}
+        name={game.name}
+        description={game.description}
+        ondelete={handleDelete}
+        
+        />
+    })
 
 
     return (
         <>
-        <GameForm getGames={getGames} />
+        <GameForm getGames={getGames}  />
         {allGames}
-       
-       
         </>
     
     )
