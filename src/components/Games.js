@@ -1,6 +1,7 @@
 import SingleGame from "./SingleGame"
 import {useState, useEffect} from "react"
 import GameForm from "./GameForm";
+import Footer from "./Footer";
 
 
 function Games(){
@@ -65,6 +66,7 @@ function Games(){
         )}
         
         {allGames}
+        <Footer />
         </>
     
     )
