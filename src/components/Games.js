@@ -26,6 +26,18 @@ function Games(){
          const deleteUpdate = games.filter((game) => game.id !== id)
          setGames(deleteUpdate)
     }
+    // update after 
+    function handleUpdateGame(updatedGame) {
+        const updatedGames = games.map((game) => {
+          if (game.id === updatedGame.id) {
+            return updatedGame;
+          } else {
+            return game;
+          }
+        });
+        setGames(updatedGames);
+      }
+    
     
 
     const allGames = games.map((game) =>{
@@ -35,6 +47,8 @@ function Games(){
         name={game.name}
         description={game.description}
         ondelete={handleDelete}
+        onUpdateDes={handleUpdateGame}
+
         
         />
     })

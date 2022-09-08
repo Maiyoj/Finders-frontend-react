@@ -21,10 +21,7 @@ function Reviews(){
         game={review.game.name}
         title={review.title}
         body={review.body}
-        user = {review.game.users.map(user=>{
-            return user.name
-        })}
-        
+       
         />
     })
 
