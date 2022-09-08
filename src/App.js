@@ -3,8 +3,9 @@ import {Routes, Route} from 'react-router-dom';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import About from './components/About';
-import Reviews from './components/Reviews';
+import Game from './components/Game';
 import Games from './components/Games';
+import Profile from './components/Profile';
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
     <Routes>
       <Route exact path="/" element={ <Home/> }/>
       <Route exact path="/about" element={<About/>}/>
-      <Route exact path="/reviews" element={<Reviews />} />
       <Route exact path="/games" element={<Games />} />
+      <Route exact path="/games/:gameID" element={<Game />} />
+      <Route exact path="/profile" element={<Profile />} />
     </Routes>
     </div>
   );

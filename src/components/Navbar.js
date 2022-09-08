@@ -1,17 +1,17 @@
 import {Link} from  "react-router-dom";
-import {  FaBeer } from 'react-icons/fa';
+import {  FaUserAlt } from 'react-icons/fa';
 
 function Navbar(){
     return(
         <>
-        <nav className="flex justify-around p-8 bg-blue-900 h-24 text-white " >
+        <nav className="flex justify-evenly p-8 bg-blue-900 h-24 text-white " >
             <h1>Games Finder</h1>
-            <div className="px-6">
+            <div className="">
             <Link to={"/"} exact="true">Home</Link>
             <Link to={"/about"} exact="true">About</Link>
             <Link to={"/games"} exact="true">Games</Link>
             <Link to={"/reviews"} exact="true">Reviews</Link>
-             <  FaBeer />
+            <Link to={"/profile"} exact="true">< FaUserAlt /></Link>
             </div>
         </nav>
         </>

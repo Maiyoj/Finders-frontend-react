@@ -41,7 +41,7 @@ function GameForm({getGames}){
   }
     return(
         <>
-    <div className="block p-6 rounded-lg shadow-lg bg-white max-w-md">
+    <div className="block p-6 rounded-lg shadow-lg bg-white max-w-md mx-20">
   <form>
     <div className="form-group mb-6">
       <input type="text" className="form-control block
