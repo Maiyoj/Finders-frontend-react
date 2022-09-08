@@ -109,7 +109,7 @@ function GameForm({getGames}){
       active:bg-blue-800 active:shadow-lg
       transition
       duration-150
-      ease-in-out" onClick={handleSubmit}>Send</button>
+      ease-in-out" onClick={handleSubmit}>Submit</button>
   </form>
 </div>
 </>

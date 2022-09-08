@@ -1,4 +1,5 @@
 import {Link} from  "react-router-dom";
+import {  FaBeer } from 'react-icons/fa';
 
 function Navbar(){
     return(
@@ -10,6 +11,7 @@ function Navbar(){
             <Link to={"/about"} exact="true">About</Link>
             <Link to={"/games"} exact="true">Games</Link>
             <Link to={"/reviews"} exact="true">Reviews</Link>
+             <  FaBeer />
             </div>
         </nav>
         </>
