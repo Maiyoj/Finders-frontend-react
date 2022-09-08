@@ -21,7 +21,7 @@ function handleFormSubmit(e) {
       }),
     })
       .then((r) => r.json())
-      .then((updatedDes) => onUpdateDes(updatedDes));
+      .then((updatedGm) => onUpdateDes(updatedGm));
   }
     
 
