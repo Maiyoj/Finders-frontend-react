@@ -4,15 +4,14 @@ import {  FaUserAlt } from 'react-icons/fa';
 function Navbar(){
     return(
         <>
-        <nav className="flex justify-evenly p-8 bg-blue-900 h-24 text-white " >
-            <h1>Games Finder</h1>
-            <div className="">
-            <Link to={"/"} exact="true">Home</Link>
-            <Link to={"/about"} exact="true">About</Link>
-            <Link to={"/games"} exact="true">Games</Link>
-            <Link to={"/reviews"} exact="true">Reviews</Link>
-            <Link to={"/profile"} exact="true">< FaUserAlt /></Link>
+        <nav className="relative w-full flex flex-wrap items-center justify-between py-3 bg-blue-800 text-gray-200 shadow-lg h-20 navbar navbar-expand-lg navbar-light">
+            <h1 className="ml-9 text-xl">Games Finder</h1>
+            <div className="ml-500  text-xl">
+            <Link  className="nav-item p-2" to={"/"} exact="true">Home</Link>
+            <Link  className="nav-item p-2"to={"/about"} exact="true">About</Link>
+            <Link  className="nav-item p-2"to={"/games"} exact="true">Games</Link>
             </div>
+            <Link className="nav-item p-2 mr-5 height: 25px; width: 25px" to={"/profile"} exact="true">< FaUserAlt /></Link>
         </nav>
         </>
     )

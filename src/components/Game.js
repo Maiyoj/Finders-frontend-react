@@ -18,10 +18,9 @@ function Game(){
         })
     },[params?.gameID]);
 
-   
     return (
         <>
-         <h1 className="text-5xl font-bold mt-2 mb-6 text-center bg-gray-50 text-gray-800 py-20 px-6">{gameDetails?.name}</h1>
+         <h1 className="text-5xl font-bold mt-0 mb-6 text-center bg-gray-50 text-gray-800 py-20 px-6">{gameDetails?.name}</h1>
          {gameDetails?.reviews.map(review => { return(
              <div key={review.id} className="flex justify-center mt-6 mx-14">
                 <div className="block p-6  shadow-lg bg-gray-200 w-50 h-40">
