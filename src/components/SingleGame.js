@@ -16,7 +16,7 @@ function SingleGame({name, description, ondelete, id, onUpdateDes}){
 
     return(
     <div className="flex justify-center">
-        <div className="block p-6 rounded-lg shadow-lg bg-gray max-w-96 h-50">
+        <div className="block p-6 shadow-lg bg-gray max-w-96 h-50">
              <h5 className="text-gray-900 text-xl leading-tight font-medium mb-2">{name}</h5>
              {isEditing ? (
              <EditGame 
