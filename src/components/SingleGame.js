@@ -16,7 +16,7 @@ function SingleGame({name, description, ondelete, id, onUpdateDes}){
 
     return(
     <div className="flex justify-center">
-        <div className="block p-6 shadow-lg bg-gray max-w-96 h-50">
+        <div className="block p-6 shadow-lg bg-gray-200 max-w-30 h-50 resize- mx-12 my-10 ">
              <h5 className="text-gray-900 text-xl leading-tight font-medium mb-2">{name}</h5>
              {isEditing ? (
              <EditGame 
@@ -25,7 +25,7 @@ function SingleGame({name, description, ondelete, id, onUpdateDes}){
              onUpdateDes={onUpdateDes}
              />):(
              <p className="text-gray-700 text-base mb-4 " >{description}</p>)}
-              <button type="button" className=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" onClick={handleDeleteClick}>Delete</button>
+              <button type="button" className=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-3" onClick={handleDeleteClick}>Delete</button>
               <button   onClick={() => setIsEditing((isEditing) => !isEditing)} type="button" className=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Edit</button>
               
           </div>
