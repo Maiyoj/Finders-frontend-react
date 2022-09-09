@@ -47,6 +47,7 @@
 
 
 ### Live Link
+https://finders-frontend.herokuapp.com/
 
 
 ### Technology  Used
