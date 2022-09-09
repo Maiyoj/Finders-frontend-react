@@ -11,7 +11,7 @@ function Game(){
     const[gameDetails, setGameDetails] = useState()
 
     useEffect(()=>{
-        fetch(`http://localhost:9292/games/${params.gameID}`)
+        fetch(`https://call-of-duty-apis.herokuapp.com/games/${params.gameID}`)
         .then((res)=> res.json())
         .then((data) =>{
             setGameDetails(data)

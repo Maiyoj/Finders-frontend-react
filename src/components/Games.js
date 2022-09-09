@@ -7,7 +7,7 @@ function Games(){
     const[games, setGames] = useState([])
     const [isAdding, setIsAdding] = useState(false)
     useEffect(()=>{
-        fetch("http://localhost:9292/games")
+        fetch("https://call-of-duty-apis.herokuapp.com/games")
         .then((res)=> res.json())
         .then((data) =>{
             setGames(data)

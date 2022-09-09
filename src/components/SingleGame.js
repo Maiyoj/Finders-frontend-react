@@ -6,7 +6,7 @@ function SingleGame({name, description, ondelete, id, onUpdateDes}){
   const [isEditing, setIsEditing] = useState(false);
 
   function handleDeleteClick() {
-    fetch(`http://localhost:9292/games/${id}`, {
+    fetch(`https://call-of-duty-apis.herokuapp.com/games/${id}`, {
       method: "DELETE",
     });
 

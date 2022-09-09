@@ -11,7 +11,7 @@ function EditGame({id, description, onUpdateDes}){
 function handleFormSubmit(e) {
     e.preventDefault();
 
-    fetch(`http://localhost:9292/games/${id}`, {
+    fetch(`https://call-of-duty-apis.herokuapp.com/games/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

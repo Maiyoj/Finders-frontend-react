@@ -21,7 +21,7 @@ function GameForm({getGames}){
       description:formData.description
     };
 
-    fetch("http://localhost:9292/games",{
+    fetch("https://call-of-duty-apis.herokuapp.com/games",{
       method: "POST",
       headers:{
         "Content-Type": "application/json",
