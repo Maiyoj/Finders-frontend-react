@@ -1,5 +1,4 @@
 import {useEffect, useState} from "react"
-import Footer from "./Footer";
 
 function Profile(){
     const [profiles, setProfile] = useState([]) 
@@ -25,7 +24,6 @@ return(
          </div>
          </div>
          </div>
-         <Footer />
     </>
 )
 

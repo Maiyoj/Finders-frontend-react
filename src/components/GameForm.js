@@ -97,7 +97,7 @@ function GameForm({getGames}){
       w-full
       px-6
       py-2.5
-      bg-blue-600
+      bg-[#1f2937]
       text-white
       font-medium
       text-xs
