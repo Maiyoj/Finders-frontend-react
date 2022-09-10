@@ -8,7 +8,6 @@ function Home(){
      <p >Check out available Games</p>
      <p >Recommend a game </p>
      </div>
-
     </>
         
   )
