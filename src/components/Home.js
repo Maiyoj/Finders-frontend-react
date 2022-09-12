@@ -1,3 +1,4 @@
+import Footer from "./Footer"
 
 function Home(){
   return(
@@ -9,13 +10,14 @@ function Home(){
      <p >Recommend a game </p>
      </div> */} 
      <div  className="home">
-     <div className="absolute text-5xl  text-grey-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+     <div className="absolute text-5xl  text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
      <p >Get The best of Game</p>
      <p >Check out available Games</p>
      <p >Recommend a game </p>
      </div>
-
      </div>
+  
+     <Footer />
     </>
         
   )
