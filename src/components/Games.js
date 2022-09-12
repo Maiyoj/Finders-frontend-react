@@ -1,6 +1,8 @@
 import SingleGame from "./SingleGame"
 import {useState, useEffect} from "react"
-import GameForm from "./GameForm";
+import GameForm from "./GameForm"
+import Footer from "./Footer"
+
 
 
 function Games(){
@@ -11,7 +13,6 @@ function Games(){
         .then((res)=> res.json())
         .then((data) =>{
             setGames(data)
-            console.log(games)
         })
     },[]);
 
@@ -65,6 +66,7 @@ function Games(){
         )}
         
         {allGames}
+        <Footer />
 
    
         </>

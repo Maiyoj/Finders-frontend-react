@@ -1,4 +1,5 @@
 import ReactPlayer from "react-player"
+import Footer from "./Footer"
 
 function About(){
     return(
@@ -21,6 +22,7 @@ function About(){
          <img src="https://m.media-amazon.com/images/M/MV5BMTc3NWY2ZTMtNTNlZC00MWM2LWI5MzYtMmU1YzY0ODk5ZjQ1XkEyXkFqcGdeQXVyODA2MTkwODk@._V1_FMjpg_UX1000_.jpg" className=" h-h-98 w-96 mb-6 mx-6" alt="Game review" />
          <img src="https://cdn.mos.cms.futurecdn.net/iSybeeHJC96izazJfb6PpA-1200-80.jpg" className=" h-98 w-96 mb-6 mx-6 " alt="Game review" />
     </div>
+    <Footer/>
      </>
 
     )
