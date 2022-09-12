@@ -4,17 +4,18 @@ import Footer from "./Footer"
 function About(){
     return(
         <>
-    <div className=" flex justify-center mt-10 mb-10">
-    <div className=" mx-12">
+    <div className=" flex justify-center mt-10 mb-10 ">
+    <div className=" mx-10 ml-30 mr-14">
         <ReactPlayer
           url="https://youtu.be/r72GP1PIZa0" 
       />
       </div>
       <div>
-        <p className="mx-12">Games Finder is a video game recommendation website 
+        <p className="mx-8 mr-40 w-100 block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md ">Games Finder is a video game recommendation website 
         with a vision to create the number one destination for similar games on the web.
         creating the most relevant recommendation lists on the web. T
-        this allows Games Finder to bridge the gap between the ever-growing number of video games and gamers by curating high quality lists and adding value by collating information, editorial reviews, filtering options and user ratings. </p>
+        this allows Games Finder to bridge the gap between the
+         ever-growing number of video games and gamers by curating high quality lists and adding value by collating information, editorial reviews, filtering options and user ratings. </p>
         </div>
     </div>
     <h1  className="text-center mt-20 text-2xl">Latest Collection</h1>
