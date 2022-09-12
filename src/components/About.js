@@ -4,7 +4,7 @@ function About(){
     return(
         <>
         <h1 className="font-medium leading-tight text-4xl mt-0 mb-2 text-black mt-4 text-center">About Us</h1>
-        <div className= "flex mb-10 ">
+        <div className= "flex flex-row ">
         <div className=" mt-10 w-80 ml-36 mr-10">
         <ReactPlayer
           url="https://youtu.be/r72GP1PIZa0" 
